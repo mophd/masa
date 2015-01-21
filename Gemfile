@@ -10,4 +10,3 @@ gem 'ruboty-redis'
 gem 'ruboty-slack'
 gem 'ruboty-japan_weather'
 gem 'ruboty-syoboi_calendar'
-
