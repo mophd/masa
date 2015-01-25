@@ -1,3 +1,4 @@
 $LOAD_PATH << File.expand_path("./lib", File.dirname(__FILE__))
 
-require 'ruboty/handlers/metal'
+Dir["ruboty/*.rb"].each { |f| require f }
+
