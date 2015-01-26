@@ -79,6 +79,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv
   rake
   ruboty
   ruboty-alias

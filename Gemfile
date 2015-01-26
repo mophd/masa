@@ -2,6 +2,7 @@ source "https://rubygems.org/"
 
 ruby "2.2.0"
 gem "rake"
+gem "dotenv"
 gem "ruboty"
 gem "ruboty-alias"
 gem "ruboty-cron"
