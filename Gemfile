@@ -11,4 +11,5 @@ gem "ruboty-slack"
 gem "ruboty-japan_weather"
 gem "ruboty-syoboi_calendar"
 
-gem 'ruboty-metal'
+# Original Gems
+gem "ruboty-metal"
