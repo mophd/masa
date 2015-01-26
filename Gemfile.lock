@@ -45,6 +45,9 @@ GEM
     ruboty-japan_weather (0.0.3)
       ruboty
       weather_jp (~> 1.0)
+    ruboty-metal (0.0.1)
+      activesupport
+      ruboty (>= 1.0.4)
     ruboty-redis (0.0.5)
       redis
       redis-namespace
@@ -76,12 +79,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv
   rake
   ruboty
   ruboty-alias
   ruboty-cron
   ruboty-google_image
   ruboty-japan_weather
+  ruboty-metal
   ruboty-redis
   ruboty-slack
   ruboty-syoboi_calendar
