@@ -1,40 +1,76 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.1.7)
-      i18n (~> 0.6, >= 0.6.9)
+    activesupport (4.2.0)
+      i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.1)
+      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    artii (2.1.1)
     chrono (0.0.4)
       activesupport
-    dotenv (1.0.2)
-    faraday (0.9.0)
+    display-calendar (0.0.4)
+    docomoru (0.1.1)
+      activesupport
+      faraday
+      faraday_middleware
+      json
+      rack
+      slop
+    domain_name (0.5.23)
+      unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.0.0)
+    faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
-    hashie (3.3.1)
-    i18n (0.6.11)
-    json (1.8.1)
+    hashie (3.4.0)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
+    i18n (0.7.0)
+    json (1.8.2)
+    mechanize (2.7.3)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0)
+      mime-types (~> 2.0)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
     mem (0.1.5)
-    minitest (5.4.3)
+    mime-types (2.4.3)
+    mini_portile (0.6.2)
+    minitest (5.5.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    nokogiri (1.5.11)
-    rake (10.3.2)
-    redis (3.1.0)
+    net-http-digest_auth (1.4)
+    net-http-persistent (2.9.4)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
+    ntlm-http (0.1.1)
+    oauth (0.4.7)
+    rack (1.6.0)
+    rake (10.4.2)
+    redis (3.2.1)
     redis-namespace (1.5.1)
       redis (~> 3.0, >= 3.0.4)
-    ruboty (1.0.4)
+    ruboty (1.2.1)
       activesupport
       bundler
       dotenv
       mem
       slop
-    ruboty-alias (0.0.3)
+    ruboty-aa (0.0.1)
+      artii (>= 2.0)
       ruboty
-    ruboty-cron (0.0.9)
+    ruboty-alias (0.0.6)
+      ruboty (>= 1.1.1)
+    ruboty-calendar (0.0.6)
+      display-calendar (~> 0.0.3)
+      ruboty
+    ruboty-cron (1.0.0)
       activesupport
       chrono
       ruboty (>= 0.2.0)
@@ -42,9 +78,9 @@ GEM
       faraday
       faraday_middleware
       ruboty
-    ruboty-japan_weather (0.0.3)
+    ruboty-japan_weather (0.0.4)
       ruboty
-      weather_jp (~> 1.0)
+      weather_jp
     ruboty-metal (0.0.1)
       activesupport
       ruboty (>= 1.0.4)
@@ -52,14 +88,33 @@ GEM
       redis
       redis-namespace
       ruboty
+    ruboty-shinchoku (0.0.1)
+      ruboty
+      tumblr-random_image
+      tumblr_client
     ruboty-slack (0.1.7)
       ruboty (>= 1.0.4)
       xrc (>= 0.0.6)
+    ruboty-sudden_death (1.0.1)
+      ruboty
+      sudden_death
     ruboty-syoboi_calendar (0.0.7)
       activesupport
       ruboty
       syoboi_calendar (= 0.3.1)
-    slop (3.6.0)
+    ruboty-talk (0.0.5)
+      docomoru (>= 0.0.3)
+      ruboty (>= 1.1.0)
+    ruboty-yasy (1.0.0)
+    ruboty-youtube (0.0.3)
+      faraday
+      mechanize
+      ruboty
+    ruboty-zoi (1.1.0)
+      ruboty
+    simple_oauth (0.3.1)
+    slop (4.0.0)
+    sudden_death (0.0.3)
     syoboi_calendar (0.3.1)
       activesupport
       faraday
@@ -67,11 +122,26 @@ GEM
       hashie
       multi_xml
     thread_safe (0.3.4)
+    tumblr-random_image (0.0.1)
+      tumblr_client
+    tumblr_client (0.8.5)
+      faraday (~> 0.9.0)
+      faraday_middleware (~> 0.9.0)
+      json
+      mime-types
+      oauth
+      simple_oauth
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    weather_jp (1.0.4)
-      nokogiri (~> 1.5.5)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.6)
+    weather_jp (2.0.0)
+      activesupport
+      nokogiri
+      rack
       rake (>= 0.9.2)
+    webrobots (0.1.1)
     xrc (0.1.4)
       activesupport
 
@@ -82,11 +152,19 @@ DEPENDENCIES
   dotenv
   rake
   ruboty
+  ruboty-aa
   ruboty-alias
+  ruboty-calendar
   ruboty-cron
   ruboty-google_image
   ruboty-japan_weather
   ruboty-metal
   ruboty-redis
+  ruboty-shinchoku
   ruboty-slack
+  ruboty-sudden_death
   ruboty-syoboi_calendar
+  ruboty-talk
+  ruboty-yasy
+  ruboty-youtube
+  ruboty-zoi
