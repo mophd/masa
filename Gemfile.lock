@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/mmyoji/ruboty-ito_life.git
+  revision: 9b92caf0979d14d85a5b3a057b2acb820251f076
+  specs:
+    ruboty-ito_life (0.1.0)
+      ruboty
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -157,6 +164,7 @@ DEPENDENCIES
   ruboty-calendar
   ruboty-cron
   ruboty-google_image
+  ruboty-ito_life!
   ruboty-japan_weather
   ruboty-metal
   ruboty-redis

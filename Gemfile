@@ -18,6 +18,7 @@ gem "ruboty-talk"
 gem "ruboty-yasy"
 gem "ruboty-youtube"
 gem "ruboty-zoi"
+gem "ruboty-ito_life", github: "mmyoji/ruboty-ito_life"
 
 group :production do
   gem "ruboty-redis"
