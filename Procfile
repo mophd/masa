@@ -1,1 +1,1 @@
-bot: bundle exec ruboty --load handlers.rb
+bot: bundle exec ruboty
